@@ -1,3 +1,4 @@
+
 # Group 85
 # Robot Assembly Factory
 
@@ -125,24 +126,29 @@ This would make the assembly portion of the game more meaningful because players
 ### Classes and Methods That May Change
 
 **GameModel.java**
+
 - `getScore()` would be used to determine which attacks a player can unlock.
 - `placePart(int)` and `discardPart()` should continue handling assembly actions.
 - We may need to add methods for tracking player turns and transitioning between assembly and battle phases.
 
 **Robot.java**
+
 - We may need to add fields for robot health and battle status.
 - New methods could include `takeDamage(int)` and `isDefeated()`.
 
 **RobotAssemblyGUI.java**
+
 - `updateDisplay()` would need to show the current player, battle status, and available attacks.
 - `newGame()` would need to support starting a multiplayer game.
 - We would need additional buttons for selecting attacks.
 
 **New BattleController.java**
+
 - A possible new controller class could manage player turns and battle actions.
 - Methods could include `startBattle()`, `performAttack()`, and `nextTurn()`.
 
 **Classes That Should Not Need to Change**
+
 - `LinkedQueue.java` should remain unchanged because it already handles the FIFO behavior needed for assembly.
 - `Part.java` should remain unchanged because the existing robot parts would still be used.
 - `Blueprints.java` and `RobotBlueprint.java` should not require major changes because the existing robot configurations can still be used.
@@ -152,12 +158,14 @@ These method names are proposed additions rather than methods that are already i
 ### Stretch Goals
 
 **Features we plan to keep:**
+
 - Two-player multiplayer mode
 - Turn-based robot battles
 - Attacks unlocked based on assembly score
 - Additional testing for new gameplay features
 
 **Features we may postpone or drop:**
+
 - A timer that affects scoring
 - Additional robot configurations beyond the existing five
 - More advanced battle animations
@@ -199,16 +207,16 @@ The following table documents the files in our project and the work completed on
 | `Part.java` | Rushil | Model development |
 | `LinkedQueue.java` | Rushil | Queue implementation |
 | `Robot.java` | Rushil | Robot state and placement logic |
-| `PlacementResult.java` | Randy | Placement result definitions |
+| `PlacementResult.java` | Bryan | Placement result definitions |
 | `GameModel.java` | Randy | Game logic and scoring |
 | `GameState.java` | Randy | Read-only game state interface |
-| `GameListener.java` | Randy | Model update notifications |
+| `GameListener.java` | Bryan | Model update notifications |
 | `GameView.java` | Bryan | View interface |
 | `ConsoleView.java` | Bryan | Console-based view |
 | `GameController.java` | Madeline | Input processing and controller logic |
 | `Main.java` | Madeline | Application startup |
-| `RobotBlueprint.java` | Confirm contributor | Robot configuration representation |
-| `Blueprints.java` | Confirm contributor | Robot configurations and clues |
+| `RobotBlueprint.java` | Rushil | Robot configuration representation |
+| `Blueprints.java` | Madeline | Robot configurations and clues |
 | `RobotAssemblyGUI.java` | Madeline | GUI implementation, revisions, and testing; GenAI-assisted |
 | `LinkedQueueTest.java` | Madeline | GenAI-assisted JUnit tests; executed and revised |
 | `GameModelTest.java` | Madeline | GenAI-assisted JUnit tests; executed and reviewed |
@@ -227,4 +235,5 @@ We used GenAI to help generate JUnit tests for `LinkedQueue`, `GameModel`, and `
 GenAI was also used to help organize our README and check that our documentation addressed the project rubric.
 
 We reviewed the AI-assisted work and tested the relevant functionality rather than assuming that the generated code was correct.
+
 
