@@ -8,7 +8,7 @@ import java.util.Random;
 /** Standalone game rules. No Scanner, System.out, or view dependencies. */
 public class GameModel {
     public static final int CORRECT_POINTS = 10;
-    public static final int DISCARD_POINTS = 5;
+    public static final int DISCARD_POINTS = 10;
     public static final int WRONG_PENALTY = 5;
 
     private final RobotBlueprint blueprint;
