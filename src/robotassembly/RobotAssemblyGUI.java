@@ -260,7 +260,7 @@ public class RobotAssemblyGUI
                 feedbackLabel.setText("✓ Correct placement! +10 points");
                 break;
             case CORRECT_DISCARD:
-                feedbackLabel.setText("✓ Correct discard! +5 points");
+                feedbackLabel.setText("✓ Correct discard! +10 points");
                 break;
             case WRONG:
                 feedbackLabel.setText("✗ Wrong position! -5 points");
