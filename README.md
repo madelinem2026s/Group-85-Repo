@@ -204,23 +204,33 @@ The following table documents the files in our project and the work completed on
 
 | File | Contributor(s) | Contribution |
 |---|---|---|
-| `Part.java` | Rushil | Model development |
-| `LinkedQueue.java` | Rushil | Queue implementation |
-| `Robot.java` | Rushil | Robot state and placement logic |
-| `PlacementResult.java` | Bryan | Placement result definitions |
-| `GameModel.java` | Randy | Game logic and scoring |
-| `GameState.java` | Randy | Read-only game state interface |
-| `GameListener.java` | Bryan | Model update notifications |
-| `GameView.java` | Bryan | View interface |
-| `ConsoleView.java` | Bryan | Console-based view |
-| `GameController.java` | Madeline | Input processing and controller logic |
-| `Main.java` | Madeline | Application startup |
-| `RobotBlueprint.java` | Rushil | Robot configuration representation |
-| `Blueprints.java` | Madeline | Robot configurations and clues |
-| `RobotAssemblyGUI.java` | Madeline | GUI implementation, revisions, and testing; GenAI-assisted |
-| `LinkedQueueTest.java` | Madeline | GenAI-assisted JUnit tests; executed and revised |
-| `GameModelTest.java` | Madeline | GenAI-assisted JUnit tests; executed and reviewed |
-| `BlueprintsTest.java` | Madeline | GenAI-assisted JUnit tests; executed and reviewed |
+| `Part.java` | Rushil | Implemented the Part model; GenAI-assisted |
+| `LinkedQueue.java` | Rushil | Implemented the linked queue and its operations; GenAI-assisted |
+| `Robot.java` | Rushil | Implemented robot state and placement logic; GenAI-assisted |
+| `PlacementResult.java` | Bryan | Created placement result definitions; GenAI-assisted |
+| `GameModel.java` | Randy | Implemented game logic and scoring; GenAI-assisted |
+| `GameState.java` | Randy | Created the read-only game state interface; GenAI-assisted |
+| `GameView.java` | Bryan | Created the view interface; GenAI-assisted |
+| `ConsoleView.java` | Bryan, Madeline | Bryan implemented the console view; Madeline revised difficulty-related output and tested the changes; GenAI-assisted |
+| `GameController.java` | Madeline | Implemented and revised input processing, controller logic, and difficulty selection; GenAI-assisted |
+| `RobotBlueprint.java` | Rushil | Implemented robot configuration representation; GenAI-assisted |
+| `Blueprints.java` | Madeline | Implemented robot configurations and clues; GenAI-assisted |
+| `RobotAssemblyGUI.java` | Madeline | Implemented, revised, and tested the GUI; GenAI-assisted |
+| `LinkedQueueTest.java` | Madeline | Created, executed, and revised JUnit tests; GenAI-assisted |
+| `GameModelTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `BlueprintsTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `ConsoleViewTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `DifficultyClues.java` | Madeline | Implemented and tested difficulty-based clues; GenAI-assisted |
+| `DifficultyCluesTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `GameControllerTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `ModelDriver.java` | Bryan | Created the model testing driver; GenAI-assisted |
+| `RobotAssemblyMain.java` | Rushil | Implemented console application startup; GenAI-assisted |
+
+## GenAI Note
+
+We used ChatGPT to assist with the development of all classes and test files in our project. GenAI was used to help implement and revise code, create JUnit tests, troubleshoot errors, and review our project documentation and rubric requirements. Team members were responsible for their assigned classes and reviewed, tested, and revised the generated code as needed.
+
+
 
 ## GenAI Note
 
