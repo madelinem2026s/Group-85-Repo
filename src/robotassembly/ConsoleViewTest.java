@@ -171,7 +171,7 @@ public class ConsoleViewTest {
         assertTrue(
             output.toString().contains("Correct discard"));
         assertTrue(
-            output.toString().contains("+5"));
+            output.toString().contains("+10"));
     }
 
     /**
