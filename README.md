@@ -8,7 +8,7 @@ Our project is a robot assembly game where players build different types of robo
 
 There are five possible robot configurations: Headless, Armless, Legless, Swapped, and Mixed. Each robot has different requirements, and players must use a riddle to figure out where each part belongs. Players can choose between Easy, Medium, and Hard difficulty, which changes how obvious the riddles are.
 
-Players earn 10 points for correct placements and 5 points for correctly discarding unnecessary parts. Incorrect attempts result in a 5-point deduction. Once all parts have been processed, the game ends and displays the final score.
+Players earn 10 points for correct placements and 10 points for correctly discarding unnecessary parts. Incorrect attempts result in a 5-point deduction. Once all parts have been processed, the game ends and displays the final score.
 
 ## How to Run the Model
 
