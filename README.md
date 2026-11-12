@@ -1,5 +1,6 @@
 
 # Group 85
+
 # Robot Assembly Factory
 
 ## Project Overview
@@ -18,13 +19,27 @@ To test the model independently of the GUI:
 
 1. Open the Robot Assembly project in Eclipse.
 2. Locate the `robotassembly` package.
-3. Right-click `GameModelTest.java`.
+3. Right-click a JUnit test class.
 4. Select **Run As → JUnit Test**.
-5. The tests should run and display their results in the JUnit window.
+5. Check the JUnit window to make sure all tests pass.
 
-The model can also be tested using `LinkedQueueTest.java` and `BlueprintsTest.java`.
+Our project includes the following JUnit test classes:
 
-These tests check the queue operations, game logic, and robot configurations without requiring the graphical interface.
+- `LinkedQueueTest.java` - Tests FIFO queue operations and edge cases.
+- `GameModelTest.java` - Tests game logic, scoring, and placement results.
+- `BlueprintsTest.java` - Tests the different robot configurations.
+- `DifficultyCluesTest.java` - Tests difficulty-based clues.
+- `ConsoleViewTest.java` - Tests console output and feedback.
+- `GameControllerTest.java` - Tests input processing and difficulty selection.
+- `PartTest.java` - Tests robot part types and labels.
+- `RobotTest.java` - Tests placement validation, occupied positions, and robot completion.
+- `RobotBlueprintTest.java` - Tests blueprint creation, required parts, and invalid configurations.
+- `PlacementResultTest.java` - Tests the possible placement results.
+- `RobotAssemblyMainTest.java` - Tests console application startup and end-of-input handling.
+
+These tests help us check that the model, console view, and controller work correctly without relying on the graphical interface.
+
+The GUI is tested manually by running `RobotAssemblyGUI.java` and checking difficulty selection, part placement, discarding, replay, and game history.
 
 ## How to Run the View
 
@@ -59,7 +74,7 @@ We also added a Discard button because certain robot configurations do not requi
 
 For validation, we included checks for invalid positions, already occupied positions, incorrect placements, and attempts to discard parts that are actually needed. These checks were important because we wanted players to be able to make mistakes without crashing the game.
 
-Finally, we added JUnit tests for our queue, game model, and robot blueprints. These tests help us verify that the core logic works correctly without needing to run the GUI.
+Finally, we added JUnit tests for our queue, game model, robot configurations, controller, console view, and other supporting classes. These tests help us verify that the core logic works correctly without needing to run the GUI.
 
 ### Did the Model Work Independently?
 
@@ -200,7 +215,7 @@ These are proposed assignments and should be confirmed with the group.
 
 ## Work Attribution
 
-The following table documents the files in our project and the work completed on them.
+The following table documents who worked on each file, how they contributed, and whether GenAI was used.
 
 | File | Contributor(s) | Contribution |
 |---|---|---|
@@ -209,28 +224,24 @@ The following table documents the files in our project and the work completed on
 | `Robot.java` | Rushil | Implemented robot state and placement logic; GenAI-assisted |
 | `PlacementResult.java` | Bryan | Created placement result definitions; GenAI-assisted |
 | `GameModel.java` | Randy | Implemented game logic and scoring; GenAI-assisted |
-| `GameState.java` | Randy | Created the read-only game state interface; GenAI-assisted |
-| `GameView.java` | Bryan | Created the view interface; GenAI-assisted |
 | `ConsoleView.java` | Bryan, Madeline | Bryan implemented the console view; Madeline revised difficulty-related output and tested the changes; GenAI-assisted |
 | `GameController.java` | Madeline | Implemented and revised input processing, controller logic, and difficulty selection; GenAI-assisted |
 | `RobotBlueprint.java` | Rushil | Implemented robot configuration representation; GenAI-assisted |
 | `Blueprints.java` | Madeline | Implemented robot configurations and clues; GenAI-assisted |
-| `RobotAssemblyGUI.java` | Madeline | Implemented, revised, and tested the GUI; GenAI-assisted |
-| `LinkedQueueTest.java` | Madeline | Created, executed, and revised JUnit tests; GenAI-assisted |
+| `DifficultyClues.java` | Madeline | Implemented and tested difficulty-based clues; GenAI-assisted |
+| `RobotAssemblyGUI.java` | Madeline | Implemented, revised, and manually tested the GUI; GenAI-assisted |
+| `RobotAssemblyMain.java` | Rushil | Implemented console application startup; GenAI-assisted |
+| `LinkedQueueTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
 | `GameModelTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
 | `BlueprintsTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
-| `ConsoleViewTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
-| `DifficultyClues.java` | Madeline | Implemented and tested difficulty-based clues; GenAI-assisted |
 | `DifficultyCluesTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
+| `ConsoleViewTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
 | `GameControllerTest.java` | Madeline | Created, executed, and reviewed JUnit tests; GenAI-assisted |
-| `ModelDriver.java` | Bryan | Created the model testing driver; GenAI-assisted |
-| `RobotAssemblyMain.java` | Rushil | Implemented console application startup; GenAI-assisted |
-
-## GenAI Note
-
-We used ChatGPT to assist with the development of all classes and test files in our project. GenAI was used to help implement and revise code, create JUnit tests, troubleshoot errors, and review our project documentation and rubric requirements. Team members were responsible for their assigned classes and reviewed, tested, and revised the generated code as needed.
-
-
+| `PartTest.java` | Madeline | Created JUnit tests for part types and labels; GenAI-assisted |
+| `RobotTest.java` | Madeline | Created JUnit tests for robot placement and completion; GenAI-assisted |
+| `RobotBlueprintTest.java` | Madeline | Created JUnit tests for blueprint validation and required parts; GenAI-assisted |
+| `PlacementResultTest.java` | Madeline | Created JUnit tests for placement result values; GenAI-assisted |
+| `RobotAssemblyMainTest.java` | Madeline | Created JUnit tests for console startup and input handling; GenAI-assisted |
 
 ## GenAI Note
 
@@ -238,10 +249,8 @@ We used ChatGPT as a tool to help with certain parts of the development process.
 
 GenAI was used to help develop and revise the graphical interface, including the layout, visual robot, difficulty display, and user feedback. We also used it to help troubleshoot errors and improve how the interface displays information.
 
-We used GenAI to help generate JUnit tests for `LinkedQueue`, `GameModel`, and `Blueprints`. We ran the tests in Eclipse and revised them when necessary to match the actual implementation.
+We used GenAI to help generate JUnit tests for all of our test classes. We ran the tests in Eclipse and revised them when necessary to match the actual implementation.
 
 GenAI was also used to help organize our README and check that our documentation addressed the project rubric.
 
 We reviewed the AI-assisted work and tested the relevant functionality rather than assuming that the generated code was correct.
-
-
