@@ -37,7 +37,7 @@ public class ConsoleView {
             "Type 1-5 to place the current part, "
             + "or 'discard' if unwanted.");
         System.out.println(
-            "Correct +10 | correct discard +5 | wrong -5");
+            "Correct +10 | correct discard +10 | wrong -5");
     }
 
     public void showTurn(GameModel model) {
@@ -63,7 +63,7 @@ public class ConsoleView {
                 System.out.println("Correct placement! +10");
                 break;
             case CORRECT_DISCARD:
-                System.out.println("Correct discard! +5");
+                System.out.println("Correct discard! +10");
                 break;
             case WRONG:
                 System.out.println(
