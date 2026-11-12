@@ -222,8 +222,6 @@ The following table documents the files in our project and the work completed on
 | `GameModelTest.java` | Madeline | GenAI-assisted JUnit tests; executed and reviewed |
 | `BlueprintsTest.java` | Madeline | GenAI-assisted JUnit tests; executed and reviewed |
 
-*This table is a draft based on our original division of work. We will update it to reflect who actually wrote, revised, reviewed, and tested each file before submission. We will also add any other files included in the final project.*
-
 ## GenAI Note
 
 We used ChatGPT as a tool to help with certain parts of the development process.
