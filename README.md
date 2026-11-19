@@ -98,7 +98,9 @@ Another change was creating a graphical interface rather than relying only on a 
 
 We also added a Discard button because certain robot configurations do not require every part. This required us to handle both correct and incorrect discards in addition to normal placements.
 
-For validation, we included checks for invalid positions, already occupied positions, incorrect placements, and attempts to discard parts that are actually needed. These checks were important because we wanted players to be able to make mistakes without crashing the game.
+## Bad Inputs Survive
+
+For validation, we included checks for invalid positions, already occupied positions, incorrect placements, and attempts to discard parts that are actually needed. These checks were important because we wanted players to be able to make mistakes without crashing the game. For Deliverable 4, we also added tests for invalid battle actions and inputs to make sure the multi-player system handles them without crashing.
 
 ### Changes Made for Deliverable 4
 
@@ -194,12 +196,9 @@ For Deliverable 4, we completed the following features from our previous Next St
 - Damage based on assembly performance
 - Additional testing for the battle system
 
-**Features we changed:**
+**Features we changed from D3:**
 
-- Instead of unlocking different attacks, assembly scores and time multipliers directly determine damage.
-
-**Features we are postponing:**
-
+- Instead of unlocking different attacks
 - Selectable attacks
 - Additional robot configurations beyond the existing five
 - More advanced battle animations
