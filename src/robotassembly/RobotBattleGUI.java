@@ -54,6 +54,7 @@ public class RobotBattleGUI
     // Timer
     private GameTimer gameTimer;
     private Timer swingTimer;
+    private final SoundManager sounds = new SoundManager();
 
     private int score = 0;
     private boolean turnActive = false;
@@ -93,6 +94,8 @@ public class RobotBattleGUI
 
     private final JButton replayButton = new JButton("Play Again");
 
+    private final JButton musicButton = new JButton("Music: ON");
+    
     private final RobotPanel robotPanel = new RobotPanel();
 
     // ==================================================
@@ -287,7 +290,7 @@ public class RobotBattleGUI
 
         controlRows.add(placementButtons);
 
-        JPanel extraButtons = new JPanel(new GridLayout(1, 3, 10, 0));
+        JPanel extraButtons = new JPanel(new GridLayout(1, 4, 10, 0));
 
         extraButtons.setOpaque(false);
 
@@ -296,12 +299,28 @@ public class RobotBattleGUI
         historyButton.addActionListener(e -> showGameHistory());
 
         replayButton.addActionListener(e -> replayGame());
+        
+        musicButton.addActionListener(e -> {
+            if (sounds.isMusicPlaying())
+            {
+                sounds.stopMusic();
+                musicButton.setText("Music: OFF");
+            }
+            else
+            {
+                sounds.playMusic();
+                musicButton.setText("Music: ON");
+            }
+        });
 
         extraButtons.add(nextButton);
 
         extraButtons.add(historyButton);
 
         extraButtons.add(replayButton);
+        
+        extraButtons.add(musicButton);
+        
 
         controlRows.add(extraButtons);
 
@@ -319,12 +338,13 @@ public class RobotBattleGUI
         root.add(bottom, BorderLayout.SOUTH);
 
         initializeDisplay();
+
+        sounds.playMusic();
     }
 
     // ==================================================
     // STYLING
     // ==================================================
-
 
     private void styleLabel(JLabel label, int size, Color color)
     {
@@ -624,23 +644,25 @@ public class RobotBattleGUI
 
     private void showFeedback(PlacementResult result)
     {
-
         switch (result)
         {
-
             case CORRECT:
+                sounds.playSound("correct.wav");
                 feedbackLabel.setText("Correct placement! +10 points");
                 break;
 
             case CORRECT_DISCARD:
+                sounds.playSound("correct.wav");
                 feedbackLabel.setText("Correct discard! +10 points");
                 break;
 
             case WRONG:
+                sounds.playSound("wrong.wav");
                 feedbackLabel.setText("Wrong position! -5 points");
                 break;
 
             case WRONG_DISCARD:
+                sounds.playSound("wrong.wav");
                 feedbackLabel.setText("That part is needed! -5 points");
                 break;
 
