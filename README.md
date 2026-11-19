@@ -114,6 +114,8 @@ We updated `RobotBattleGUI.java` to display player health, battle information, a
 
 We also added `GameTimer.java` to manage the time limits and multipliers for each difficulty.
 
+Audio was also added for background music, correct placements, and incorrect placements.
+
 ### Did the Model Work Independently?
 
 Yes, the model can be tested independently of the graphical interface.
