@@ -162,6 +162,10 @@ Currently, the GUI interacts with the assembly model and battle model separately
 
 We could also create a separate class for managing the overall flow between assembly turns and battle rounds. This would make it easier to add new features, such as different attack types or additional players.
 
+### What would make the next feature cheaper: 
+
+Difficulty and game rules currently live outside the model. GameController picks “Easy/Medium/Hard” as a plain string, and the GUI classes carry a lot of the display logic. Moving that into a small Difficulty or game-settings object that GameModel takes in its constructor would let a new feature change one model class instead of the controller and both GUIs. Putting a View interface in front of ConsoleView and the Swing GUIs would also mean a new view method only needs adding in one place, rather than being copied into each view class.
+
 ## Next Steps
 
 ### Remaining Work
