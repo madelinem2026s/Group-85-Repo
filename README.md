@@ -266,6 +266,8 @@ The following table documents who worked on each file, how they contributed, and
 | `RobotAssemblyMainTest.java` | Madeline | Created JUnit tests for console startup and input handling; GenAI-assisted |
 | `BattleModelTest.java` | Rushil, Bryan | Created and ran 21 JUnit 5 tests for battle logic; GenAI-assisted |
 | `BattleControllerTest.java` | Madeline, Randy | Created and ran 7 JUnit 5 tests for controller behavior; GenAI-assisted |
+| `SoundManager.java` | Madeline| Created sound manager to implement into GUI; GenAI-assisted |
+
 
 ## GenAI Note
 
